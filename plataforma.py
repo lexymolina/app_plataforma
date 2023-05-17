@@ -4,6 +4,104 @@
 
 # se importa la libreria tkinter con todas sus funciones
 from tkinter import *
+from tkinter import messagebox,ttk
+
+# abrir toplevel datos del niño
+def abrir_toplevel_datos_niño():
+    global toplevel_datos_niño
+    toplevel_datos_niño = Toplevel()
+    toplevel_datos_niño.title("informacion del estudiante")
+    toplevel_datos_niño.resizable(False, False)
+    toplevel_datos_niño.geometry("500x600")
+    toplevel_datos_niño.config(bg="white")
+
+    # etiqueta para informacion academica
+    lb_informacion = Label(toplevel_datos_niño, text = "INFORMACION ACADEMICA ")
+    lb_informacion.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_informacion.place(x=100, y=20)
+
+    # etiqueta para los datos del estudiante
+    lb_datos = Label(toplevel_datos_niño, text = "ASIGNATURAS: ")
+    lb_datos.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_datos.place(x=20, y=150)
+
+    combo = ttk.Combobox(toplevel_datos_niño, state="reandonly",values=["valores","sociales","castellano","fisica","matematicas","ciencias politicas","religion","edu. fisica","filosofia","ingles","artistica","quimica","sistemas","estadistica"])
+    combo.place(x=200,y=150)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "cognitivo: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=200)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=200)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "procediemental: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=250)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=250)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "actitudinal: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=300)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=300)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "actitudinal: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=350)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=350)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "autoevalucacion: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=400)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=400)
+
+    # etiqueta para nota
+    lb_nota = Label(toplevel_datos_niño, text = "bimestral: ")
+    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota.place(x=20, y=450)
+
+    #caja de texto para nota 
+    entry_nota = Entry(toplevel_datos_niño)
+    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota.focus_set()
+    entry_nota.place(x=200, y=450)
+
+    # etiqueta para nota definitiva
+    lb_nota_definitiva = Label(toplevel_datos_niño, text = "NOTA DEFINITIVA: ")
+    lb_nota_definitiva.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_definitiva.place(x=20, y=550)
+
+
+
+
 
 #-----------------------------
 # ventana principal de la app
@@ -27,8 +125,8 @@ ventana_principal.config(bg="white")
 
 # logo de la app
 logo = PhotoImage(file = "estudiantes.png")
-lb_logo = Label(ventana_principal, image=logo, bg="white")
-lb_logo.place(x=280, y=30)
+lb_logo = Label(image=logo, bg="white")
+lb_logo.place(x=290, y=30)
 
 # etiqueta para los datos del estudiante
 lb_datos = Label(ventana_principal, text = "DATOS DEL ESTUDIANTE: ")
@@ -80,8 +178,13 @@ entry_edad.focus_set()
 entry_edad.place(x=90, y=400)
 
 #boton niño
-img = PhotoImage(file="niño.png")
-boton_niño = Button(text="test", width=150, height=150, image=img,justify="right")
+ing = PhotoImage(file="niño1.png")
+boton_niño = Button(text="test", width=150, height=150, image=ing, justify="right", command=abrir_toplevel_datos_niño)
 boton_niño.place(x=50, y=500)
+
+#boton niña
+img = PhotoImage(file="niña1.png")
+boton_niña = Button(text="test", width=150, height=150, image=img, justify="right")
+boton_niña.place(x=500, y=500)
 
 ventana_principal.mainloop()
