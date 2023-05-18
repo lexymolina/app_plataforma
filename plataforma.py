@@ -6,19 +6,20 @@
 from tkinter import *
 from tkinter import messagebox,ttk
 
+
 # abrir toplevel datos del niño
 def abrir_toplevel_datos_niño():
     global toplevel_datos_niño
     toplevel_datos_niño = Toplevel()
-    toplevel_datos_niño.title("informacion del estudiante")
+    toplevel_datos_niño.title("Lexy Juliana Mato Molina")
     toplevel_datos_niño.resizable(False, False)
-    toplevel_datos_niño.geometry("500x600")
+    toplevel_datos_niño.geometry("500x500")
     toplevel_datos_niño.config(bg="white")
 
     # etiqueta para informacion academica
     lb_informacion = Label(toplevel_datos_niño, text = "INFORMACION ACADEMICA ")
     lb_informacion.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_informacion.place(x=100, y=20)
+    lb_informacion.place(x=100, y=10)
 
     # etiqueta para los datos del estudiante
     lb_datos = Label(toplevel_datos_niño, text = "ASIGNATURAS: ")
@@ -28,80 +29,106 @@ def abrir_toplevel_datos_niño():
     combo = ttk.Combobox(toplevel_datos_niño, state="reandonly",values=["valores","sociales","castellano","fisica","matematicas","ciencias politicas","religion","edu. fisica","filosofia","ingles","artistica","quimica","sistemas","estadistica"])
     combo.place(x=200,y=150)
 
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "cognitivo: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=200)
+    # etiqueta para nota cognitiva
+    lb_nota_cognitiva = Label(toplevel_datos_niño, text = "cognitivo: ")
+    lb_nota_cognitiva.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_cognitiva.place(x=20, y=200)
 
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=200)
+    #caja de texto para nota cognitiva
+    entry_nota_cognitiva = Entry(toplevel_datos_niño)
+    entry_nota_cognitiva.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_cognitiva.focus_set()
+    entry_nota_cognitiva.place(x=200, y=200)
 
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "procediemental: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=250)
+    # etiqueta para nota procediemental
+    lb_nota_procedimental = Label(toplevel_datos_niño, text = "procediemental: ")
+    lb_nota_procedimental.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_procedimental.place(x=20, y=250)
 
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=250)
+    #caja de texto para nota procedimental
+    entry_nota_procediemental = Entry(toplevel_datos_niño)
+    entry_nota_procediemental.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_procediemental.focus_set()
+    entry_nota_procediemental.place(x=200, y=250)
 
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "actitudinal: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=300)
+    # etiqueta para nota actitudinal
+    lb_nota_actitudinal = Label(toplevel_datos_niño, text = "actitudinal: ")
+    lb_nota_actitudinal.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_actitudinal.place(x=20, y=300)
 
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=300)
+    #caja de texto para nota actitudinal
+    entry_nota_actitudinal = Entry(toplevel_datos_niño)
+    entry_nota_actitudinal.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_actitudinal.focus_set()
+    entry_nota_actitudinal.place(x=200, y=300)
 
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "actitudinal: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=350)
+    # etiqueta para nota autoevalucacion
+    lb_nota_autoevaluacion = Label(toplevel_datos_niño, text = "autoevalucacion: ")
+    lb_nota_autoevaluacion.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_autoevaluacion.place(x=20, y=350)
 
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=350)
+    #caja de texto para nota autoevaluacion
+    entry_nota_autoevaluacion = Entry(toplevel_datos_niño)
+    entry_nota_autoevaluacion.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_autoevaluacion.focus_set()
+    entry_nota_autoevaluacion.place(x=200, y=350)
 
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "autoevalucacion: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=400)
+    # etiqueta para nota bimestral
+    lb_nota_bimestral = Label(toplevel_datos_niño, text = "bimestral: ")
+    lb_nota_bimestral.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_bimestral.place(x=20, y=400)
 
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=400)
-
-    # etiqueta para nota
-    lb_nota = Label(toplevel_datos_niño, text = "bimestral: ")
-    lb_nota.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota.place(x=20, y=450)
-
-    #caja de texto para nota 
-    entry_nota = Entry(toplevel_datos_niño)
-    entry_nota.config(bg="white", fg="red", font=("times new romann", 12), width=10)
-    entry_nota.focus_set()
-    entry_nota.place(x=200, y=450)
+    #caja de texto para nota bimestral
+    entry_nota_bimestral = Entry(toplevel_datos_niño)
+    entry_nota_bimestral.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_bimestral.focus_set()
+    entry_nota_bimestral.place(x=200, y=400)
 
     # etiqueta para nota definitiva
     lb_nota_definitiva = Label(toplevel_datos_niño, text = "NOTA DEFINITIVA: ")
     lb_nota_definitiva.config(bg="white", fg="black", font=("Helvetica", 15))
-    lb_nota_definitiva.place(x=20, y=550)
+    lb_nota_definitiva.place(x=20, y=450)
 
+# abrir toplevel datos del niño
+def abrir_toplevel_datos_niño1():
+    global toplevel_datos_niño1
+    toplevel_datos_niño1 = Toplevel()
+    toplevel_datos_niño1.title("Lexy Juliana Mato Molina")
+    toplevel_datos_niño1.resizable(False, False)
+    toplevel_datos_niño1.geometry("300x300")
+    toplevel_datos_niño1.config(bg="white")
 
+    # etiqueta para datos de imc
+    lb_informacion = Label(toplevel_datos_niño1, text = "DATOS DE IMC ")
+    lb_informacion.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_informacion.place(x=55, y=10)
 
+    # etiqueta para el peso
+    lb_nota_cognitiva = Label(toplevel_datos_niño1, text = "peso: ")
+    lb_nota_cognitiva.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_cognitiva.place(x=30, y=50)
 
+    #caja de texto para el peso
+    entry_nota_cognitiva = Entry(toplevel_datos_niño1)
+    entry_nota_cognitiva.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_cognitiva.focus_set()
+    entry_nota_cognitiva.place(x=120, y=50)
+
+    # etiqueta para la estatura
+    lb_nota_cognitiva = Label(toplevel_datos_niño1, text = "estatura: ")
+    lb_nota_cognitiva.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_cognitiva.place(x=30, y=100)
+
+    #caja de texto para la estatura
+    entry_nota_cognitiva = Entry(toplevel_datos_niño1)
+    entry_nota_cognitiva.config(bg="white", fg="red", font=("times new romann", 12), width=10)
+    entry_nota_cognitiva.focus_set()
+    entry_nota_cognitiva.place(x=120, y=100)
+
+    # etiqueta para calculo del imc
+    lb_nota_cognitiva = Label(toplevel_datos_niño1, text = "calculo IMC: ")
+    lb_nota_cognitiva.config(bg="white", fg="black", font=("Helvetica", 15))
+    lb_nota_cognitiva.place(x=30, y=200)
 
 #-----------------------------
 # ventana principal de la app
@@ -184,7 +211,7 @@ boton_niño.place(x=50, y=500)
 
 #boton niña
 img = PhotoImage(file="niña1.png")
-boton_niña = Button(text="test", width=150, height=150, image=img, justify="right")
+boton_niña = Button(text="test", width=150, height=150, image=img, justify="right",command=abrir_toplevel_datos_niño1 )
 boton_niña.place(x=500, y=500)
 
 ventana_principal.mainloop()
